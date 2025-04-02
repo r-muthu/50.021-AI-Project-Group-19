@@ -17,13 +17,14 @@ class CustomDataset:
         
         # Load and shuffle dataset
         self.df = pd.read_csv(self.file_path)
+        self.df.rename(columns={'Content': 'text', 'Label': 'label'}, inplace=True)
         self.df = self.df.sample(frac=1, random_state=self.seed).reset_index(drop=True)
         
         # Initialize tokenizer
         self.tokenizer = AutoTokenizer.from_pretrained(self.model_checkpoint, use_fast=True)
         
     def preprocess_function(self, input_data):
-        return self.tokenizer(input_data["Content"], max_length=self.max_len, padding="max_length", truncation=True)
+        return self.tokenizer(input_data["text"], max_length=self.max_len, padding="max_length", truncation=True)
         
     def get_splits(self, test_size=0.2, val_size=0.5):
         # Convert to Hugging Face dataset
