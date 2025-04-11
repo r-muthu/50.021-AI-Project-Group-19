@@ -45,8 +45,8 @@ class CustomDataset:
         
         return train_dataset, val_dataset, test_dataset
 
-    def tokenizer_length(self):
-        return len(self.tokenizer)
+    def get_tokenizer(self):
+        return self.tokenizer
 
 """
 dataset = CustomDataset("HateSpeechDatasetBalanced.csv", "google/bert_uncased_L-2_H-128_A-2")
