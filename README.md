@@ -1,4 +1,14 @@
-# 🛡️ Hate Speech Detection using distilRoBERTa
+# 🧠 Hate Speech Detection Project by Group 19
+
+1007010 Muthu Ramaswamy
+1007124 Manishansh Shaswat
+1007012 Mohamed Zuhairi Bin Mohamed Amran 
+1007156 Alen Syzdykov 
+1006324 Ethan Choo E-Rhen 
+
+---
+
+## 🛡️ Our best model: distilRoBERTa
 
 This project enables users to train, test, and deploy a robust hate speech classification model using `distilroberta-base`. It leverages Hugging Face's Transformers and PyTorch, with gradual unfreezing, early stopping, and safetensors support for efficient model saving.
 
@@ -6,7 +16,7 @@ This project enables users to train, test, and deploy a robust hate speech class
 
 ## 📁 Project Structure
 
-- `train.ipynb`: Notebook to train, save, and test models.
+- `modelSetup:Train.ipynb`: Notebook to train, save, and test models.
 - `models.py`: Contains model architectures.
 - `data_preprocessing.py`: Dataset handling and preprocessing logic.
 - `Hate_Speech_UI.py`: Streamlit web app for deploying a trained model.
@@ -51,7 +61,7 @@ If you'd like to skip training and immediately test the model, you can download 
 
 ## 🏋️‍♂️ Option B: Train the Model from Scratch
 
-1. Open `train.ipynb`.
+1. Open `modelSetup:Train.ipynb`.
 
 2. Follow the **section flow** as outlined in the notebook:
    - Skip the **"Loading of model"** section.
@@ -85,7 +95,7 @@ If you'd like to skip training and immediately test the model, you can download 
 
 ## 💾 Saving Model Weights
 
-In `train.ipynb`, after training:
+In `modelSetup:Train.ipynb`, after training:
 
 1. Convert the model to `.safetensors` (optional, already done during training if using safetensors).
 2. Save the state dict:
@@ -154,16 +164,4 @@ To test the saved model:
 Evaluation includes:
 - Accuracy and F1-score on test set
 
-These are automatically generated in the final cells of `train.ipynb`.
-
----
-
-## 🧠 Authors
-
-Built with ❤️ for hate speech detection research.
-
----
-
-## 📎 License
-
-MIT License or your institution's license (edit accordingly).
+These are automatically generated in the final cells of `modelSetup:Train.ipynb`.
