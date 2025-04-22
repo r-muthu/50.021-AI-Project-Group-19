@@ -16,7 +16,7 @@ This project enables users to train, test, and deploy a robust hate speech class
 
 ## 📁 Project Structure
 
-- `modelSetup:Train.ipynb`: Notebook to train, save, and test models.
+- `modelSetup_Train.ipynb`: Notebook to train, save, and test models.
 - `models.py`: Contains model architectures.
 - `data_preprocessing.py`: Dataset handling and preprocessing logic.
 - `Hate_Speech_UI.py`: Streamlit web app for deploying a trained model.
@@ -61,7 +61,7 @@ If you'd like to skip training and immediately test the model, you can download 
 
 ## 🏋️‍♂️ Option B: Train the Model from Scratch
 
-1. Open `modelSetup:Train.ipynb`.
+1. Open `modelSetup_Train.ipynb`.
 
 2. Follow the **section flow** as outlined in the notebook:
    - Skip the **"Loading of model"** section.
@@ -164,4 +164,4 @@ To test the saved model:
 Evaluation includes:
 - Accuracy and F1-score on test set
 
-These are automatically generated in the final cells of `modelSetup:Train.ipynb`.
+These are automatically generated in the final cells of `modelSetup_Train.ipynb`.
