@@ -1,9 +1,9 @@
 # 🧠 Hate Speech Detection Project by Group 19
 
 1007010 Muthu Ramaswamy \
-1007124 Manishansh Shaswat 
-1007012 Mohamed Zuhairi Bin Mohamed Amran 
-1007156 Alen Syzdykov 
+1007124 Manishansh Shaswat \
+1007012 Mohamed Zuhairi Bin Mohamed Amran \
+1007156 Alen Syzdykov \
 1006324 Ethan Choo E-Rhen 
 
 ---
