@@ -6,7 +6,7 @@ This project enables users to train, test, and deploy a robust hate speech class
 
 ## 📁 Project Structure
 
-- `modelSetup:Train.ipynb`: Notebook to train, save, and test models.
+- `train.ipynb`: Notebook to train, save, and test models.
 - `models.py`: Contains model architectures.
 - `data_preprocessing.py`: Dataset handling and preprocessing logic.
 - `Hate_Speech_UI.py`: Streamlit web app for deploying a trained model.
@@ -24,11 +24,36 @@ pip install -U transformers datasets evaluate accelerate scikit-learn matplotlib
 
 ---
 
-## 🏋️‍♂️ Training the Model
+## 🧠 Using the Pretrained Model (Recommended)
 
-1. Open `modelSetup:Train.ipynb`.
+If you'd like to skip training and immediately test the model, you can download the pretrained weights:
 
-2. Follow the **section flow** as outlined in the notebook. Ensure you:
+1. **Download weights (.safetensors)**:
+   [Download model.safetensors](https://drive.google.com/file/d/1c7pxEXCaEclE-OtdFrGTInDKUWgEbViM/view?usp=sharing)
+
+2. **Place the file** in your project directory under `models/`:
+   ```
+   ./models/model.safetensors
+   ```
+
+3. **Edit `Hate_Speech_UI.py` to load the weights**:
+   ```python
+   state_dict = load_file("models/model.safetensors")
+   model.load_state_dict(state_dict, strict=False)
+   ```
+
+4. **Run the Streamlit app**:
+   ```bash
+   streamlit run Hate_Speech_UI.py
+   ```
+
+---
+
+## 🏋️‍♂️ Option B: Train the Model from Scratch
+
+1. Open `train.ipynb`.
+
+2. Follow the **section flow** as outlined in the notebook:
    - Skip the **"Loading of model"** section.
    - Run all other sections **sequentially**.
 
